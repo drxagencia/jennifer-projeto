@@ -39,7 +39,7 @@ export default function PropertyCard({ property, index }: { property: Property; 
         />
       </motion.div>
 
-      <div className="absolute inset-0 z-20 p-6 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-black/60 via-transparent to-transparent">
+      <div className="absolute inset-0 z-20 p-6 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-black/80 via-black/20 to-transparent">
         <div className="flex justify-end">
           <div className="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-white hover:bg-white hover:text-luxury-charcoal transition-colors duration-300">
             <ArrowUpRight size={20} />
@@ -48,7 +48,7 @@ export default function PropertyCard({ property, index }: { property: Property; 
         
         <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
           <span className="inline-block px-3 py-1 mb-3 text-xs font-medium tracking-wider text-white uppercase bg-luxury-gold/90 backdrop-blur-md">
-            Exclusive
+            Exclusivo
           </span>
           <h3 className="text-2xl font-serif text-white mb-1">{property.title}</h3>
           <div className="flex items-center text-white/80 text-sm mb-4">
@@ -56,14 +56,14 @@ export default function PropertyCard({ property, index }: { property: Property; 
             {property.location}
           </div>
           <div className="flex items-center justify-between border-t border-white/20 pt-4 text-white/90 text-sm font-light">
-            <span>{property.beds} Beds</span>
-            <span>{property.baths} Baths</span>
+            <span>{property.beds} Quartos</span>
+            <span>{property.baths} Banheiros</span>
             <span>{property.sqm} m²</span>
           </div>
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 p-6 z-10 group-hover:opacity-0 transition-opacity duration-500">
+      <div className="absolute bottom-0 left-0 right-0 p-6 z-10 group-hover:opacity-0 transition-opacity duration-500 bg-gradient-to-t from-black/60 to-transparent">
         <h3 className="text-2xl font-serif text-white drop-shadow-md">{property.title}</h3>
         <p className="text-luxury-gold-light font-medium mt-1">{property.price}</p>
       </div>

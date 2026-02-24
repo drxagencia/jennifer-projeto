@@ -23,10 +23,10 @@ export default function ConciergeForm() {
 
       <div className="max-w-4xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <span className="text-luxury-gold text-sm tracking-[0.2em] uppercase font-medium mb-4 block">Concierge Service</span>
-          <h2 className="text-4xl md:text-5xl font-serif mb-6">Private Consultation</h2>
+          <span className="text-luxury-gold text-sm tracking-[0.2em] uppercase font-medium mb-4 block">Serviço de Concierge</span>
+          <h2 className="text-4xl md:text-5xl font-serif mb-6">Consultoria Privada</h2>
           <p className="text-white/60 max-w-xl mx-auto font-light">
-            Allow our team to curate a selection of properties tailored to your specific lifestyle requirements.
+            Permita que nossa equipe selecione propriedades adaptadas ao seu estilo de vida específico.
           </p>
         </div>
 
@@ -40,44 +40,44 @@ export default function ConciergeForm() {
               <div className="w-20 h-20 rounded-full border-2 border-luxury-gold flex items-center justify-center mx-auto mb-6 text-luxury-gold">
                 <Send size={32} />
               </div>
-              <h3 className="text-2xl font-serif mb-2">Request Received</h3>
-              <p className="text-white/60">Our concierge will contact you shortly.</p>
+              <h3 className="text-2xl font-serif mb-2">Solicitação Recebida</h3>
+              <p className="text-white/60">Nosso concierge entrará em contato em breve.</p>
               <button 
                 onClick={() => setFormState('idle')}
                 className="mt-8 text-sm uppercase tracking-widest text-luxury-gold hover:text-white transition-colors"
               >
-                Send another request
+                Enviar outra solicitação
               </button>
             </motion.div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-8">
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="group">
-                  <label className="block text-xs uppercase tracking-widest text-white/40 mb-2 group-focus-within:text-luxury-gold transition-colors">Name</label>
+                  <label className="block text-xs uppercase tracking-widest text-white/40 mb-2 group-focus-within:text-luxury-gold transition-colors">Nome</label>
                   <input 
                     type="text" 
                     required
-                    className="w-full bg-transparent border-b border-white/20 py-3 text-lg focus:outline-none focus:border-luxury-gold transition-colors"
-                    placeholder="Your Full Name"
+                    className="w-full bg-transparent border-b border-white/20 py-3 text-lg focus:outline-none focus:border-luxury-gold transition-colors text-white"
+                    placeholder="Seu Nome Completo"
                   />
                 </div>
                 <div className="group">
-                  <label className="block text-xs uppercase tracking-widest text-white/40 mb-2 group-focus-within:text-luxury-gold transition-colors">Contact</label>
+                  <label className="block text-xs uppercase tracking-widest text-white/40 mb-2 group-focus-within:text-luxury-gold transition-colors">Contato</label>
                   <input 
                     type="text" 
                     required
-                    className="w-full bg-transparent border-b border-white/20 py-3 text-lg focus:outline-none focus:border-luxury-gold transition-colors"
-                    placeholder="Phone or Email"
+                    className="w-full bg-transparent border-b border-white/20 py-3 text-lg focus:outline-none focus:border-luxury-gold transition-colors text-white"
+                    placeholder="Telefone ou E-mail"
                   />
                 </div>
               </div>
               
               <div className="group">
-                <label className="block text-xs uppercase tracking-widest text-white/40 mb-2 group-focus-within:text-luxury-gold transition-colors">Preferences</label>
+                <label className="block text-xs uppercase tracking-widest text-white/40 mb-2 group-focus-within:text-luxury-gold transition-colors">Preferências</label>
                 <textarea 
                   rows={3}
-                  className="w-full bg-transparent border-b border-white/20 py-3 text-lg focus:outline-none focus:border-luxury-gold transition-colors resize-none"
-                  placeholder="Tell us about your ideal property..."
+                  className="w-full bg-transparent border-b border-white/20 py-3 text-lg focus:outline-none focus:border-luxury-gold transition-colors resize-none text-white"
+                  placeholder="Conte-nos sobre sua propriedade ideal..."
                 />
               </div>
 
@@ -87,7 +87,7 @@ export default function ConciergeForm() {
                   disabled={formState === 'submitting'}
                   className="px-10 py-4 bg-luxury-gold text-luxury-charcoal font-medium uppercase tracking-widest text-sm hover:bg-white transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  {formState === 'submitting' ? 'Sending...' : 'Request Consultation'}
+                  {formState === 'submitting' ? 'Enviando...' : 'Solicitar Consultoria'}
                 </MagneticButton>
               </div>
             </form>

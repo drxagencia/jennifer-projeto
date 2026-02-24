@@ -25,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${montserrat.variable} scroll-smooth`}>
-      <body className="bg-stone-50 text-stone-900 antialiased selection:bg-amber-200 selection:text-stone-900">
+    <html lang="pt-BR" className={`${playfair.variable} ${montserrat.variable} scroll-smooth overflow-x-hidden`}>
+      <body className="bg-stone-100 text-stone-900 antialiased selection:bg-amber-200 selection:text-stone-900 overflow-x-hidden w-full">
         {children}
       </body>
     </html>

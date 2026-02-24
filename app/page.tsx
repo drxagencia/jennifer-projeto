@@ -71,7 +71,7 @@ const properties = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-luxury-cream">
+    <main className="min-h-screen bg-stone-100">
       <FilterBar />
       <Hero />
       
@@ -83,8 +83,8 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-luxury-gold text-sm tracking-[0.2em] uppercase font-medium mb-2 block">Curated Selection</span>
-            <h2 className="text-4xl md:text-5xl font-serif text-luxury-charcoal">Featured Residences</h2>
+            <span className="text-luxury-gold text-sm tracking-[0.2em] uppercase font-medium mb-2 block">Seleção Curada</span>
+            <h2 className="text-4xl md:text-5xl font-serif text-luxury-charcoal">Residências em Destaque</h2>
           </motion.div>
           
           <motion.button
@@ -94,7 +94,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="hidden md:block text-sm uppercase tracking-widest border-b border-luxury-charcoal pb-1 hover:text-luxury-gold hover:border-luxury-gold transition-colors"
           >
-            View All Properties
+            Ver Todas as Propriedades
           </motion.button>
         </div>
 
@@ -106,7 +106,7 @@ export default function Home() {
         
         <div className="mt-12 text-center md:hidden">
            <button className="text-sm uppercase tracking-widest border-b border-luxury-charcoal pb-1">
-            View All Properties
+            Ver Todas as Propriedades
           </button>
         </div>
       </section>
@@ -118,36 +118,36 @@ export default function Home() {
           <div className="col-span-1 md:col-span-2">
             <h2 className="text-2xl font-serif mb-6">Luxe Balneário</h2>
             <p className="text-white/60 max-w-sm font-light leading-relaxed">
-              Defining the standard of luxury living in Santa Catarina. 
-              We curate the most exceptional properties for the most discerning clients.
+              Definindo o padrão de vida de luxo em Santa Catarina. 
+              Curamos as propriedades mais excepcionais para os clientes mais exigentes.
             </p>
           </div>
           
           <div>
-            <h4 className="text-sm uppercase tracking-widest text-luxury-gold mb-6">Navigation</h4>
+            <h4 className="text-sm uppercase tracking-widest text-luxury-gold mb-6">Navegação</h4>
             <ul className="space-y-4 text-white/70 font-light">
-              <li><a href="#" className="hover:text-white transition-colors">Portfolio</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Developments</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Portfólio</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Empreendimentos</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Concierge</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Sobre Nós</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-sm uppercase tracking-widest text-luxury-gold mb-6">Contact</h4>
+            <h4 className="text-sm uppercase tracking-widest text-luxury-gold mb-6">Contato</h4>
             <ul className="space-y-4 text-white/70 font-light">
               <li>Av. Atlântica, 1200</li>
               <li>Balneário Camboriú, SC</li>
               <li>+55 47 9999-9999</li>
-              <li>contact@luxebc.com</li>
+              <li>contato@luxebc.com</li>
             </ul>
           </div>
         </div>
         <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-white/40 text-xs uppercase tracking-wider">
-          <p>&copy; 2024 Luxe Balneário. All rights reserved.</p>
+          <p>&copy; 2024 Luxe Balneário. Todos os direitos reservados.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white">Privacy</a>
-            <a href="#" className="hover:text-white">Terms</a>
+            <a href="#" className="hover:text-white">Privacidade</a>
+            <a href="#" className="hover:text-white">Termos</a>
           </div>
         </div>
       </footer>
