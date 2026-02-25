@@ -1,0 +1,230 @@
+.heroContainer {
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  --spotlight-color: rgba(255, 255, 255, 0.08);
+  
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #050505; /* Deep black */
+  background-image: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    var(--spotlight-color),
+    transparent 40%
+  );
+  color: #e0e0e0;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Reset for this component to ensure pure CSS feel */
+.heroContainer * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.navLink {
+  color: #a0a0a0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #fff;
+}
+
+/* Main Hero Content */
+.mainContent {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  padding: 0 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 10;
+}
+
+.textContent {
+  padding-right: 4rem;
+}
+
+.headline {
+  font-size: 4rem;
+  line-height: 1.1;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+}
+
+.subheadline {
+  font-size: 1.125rem;
+  color: #a0a0a0;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* Search Bar */
+.searchContainer {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  max-width: 700px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.inputGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #808080;
+  font-weight: 600;
+}
+
+.select, .input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+
+.select:focus, .input:focus {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.searchButton {
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 0 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  align-self: flex-end;
+  height: 42px; /* Match input height approx */
+}
+
+.searchButton:hover {
+  transform: translateY(-2px);
+  background-color: #f0f0f0;
+}
+
+/* Image Placeholder */
+.imagePlaceholder {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  /* Gradient mask to blend with black background at the bottom/edges */
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+.realtorImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  /* Grayscale or desaturated to fit dark theme */
+  filter: grayscale(20%) contrast(110%);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .headline {
+    font-size: 3rem;
+  }
+  
+  .mainContent {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    gap: 4rem;
+  }
+
+  .textContent {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .subheadline {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .searchContainer {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .searchButton {
+    width: 100%;
+  }
+
+  .imagePlaceholder {
+    height: 50vh;
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1.5rem;
+  }
+  
+  .nav {
+    display: none; /* Simple mobile hide for now, or hamburger */
+  }
+
+  .headline {
+    font-size: 2.5rem;
+  }
+}
